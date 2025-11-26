@@ -1,0 +1,86 @@
+
+DevTools listening on ws://127.0.0.1:34471/devtools/browser/7b7d873a-02e9-4d89-9a02-abc69230b93b
+<<<CYPRESS.STDERR.START>>>(node:20126) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+<<<CYPRESS.STDERR.END>>>The experimentalStudio option was removed in Cypress version 15.4.0.
+
+Cypress Studio is now available for all users.
+
+You can safely remove this option from your config.
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.6.0                                                                         │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v20.5.1 (/usr/bin/node)                                                        │
+  │ Specs:          1 found (home.cy.js)                                                           │
+  │ Searched:       cypress/e2e/home.cy.js                                                         │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  home.cy.js                                                                      (1 of 1)
+
+
+  Home Page Tests
+    1) should display the Hero section correctly
+    ✓ should display all main sections
+
+
+  1 passing (4s)
+  1 failing
+
+  1) Home Page Tests
+       should display the Hero section correctly:
+     TypeError: _HomePage.default.contains is not a function
+      at Context.eval (webpack://testprotesting/./cypress/e2e/home.cy.js:11:17)
+      at runnable.fn (https://www.testproai.com/__cypress/runner/cypress_runner.js:145954:19)
+      at callFn (https://www.testproai.com/__cypress/runner/cypress_runner.js:165048:21)
+      at Runnable.run (https://www.testproai.com/__cypress/runner/cypress_runner.js:165035:7)
+      at <unknown> (https://www.testproai.com/__cypress/runner/cypress_runner.js:171130:30)
+      at PassThroughHandlerContext.finallyHandler (https://www.testproai.com/__cypress/runner/cypress_runner.js:4042:23)
+      at PassThroughHandlerContext.tryCatcher (https://www.testproai.com/__cypress/runner/cypress_runner.js:1777:23)
+      at Promise._settlePromiseFromHandler (https://www.testproai.com/__cypress/runner/cypress_runner.js:1489:31)
+      at Promise._settlePromise (https://www.testproai.com/__cypress/runner/cypress_runner.js:1546:18)
+
+
+
+[mochawesome] Report JSON saved to /home/rkshtjain3/testproai/testproTesting/cypress/reports/home-report_001.json
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     home.cy.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/rkshtjain3/testproai/testproTesting/cypress/screenshots/home.cy.js/Home Pa     (1280x720)
+     ge Tests -- should display the Hero section correctly (failed).png                             
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  home.cy.js                               00:03        2        1        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:03        2        1        1        -        -  
+

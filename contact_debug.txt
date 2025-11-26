@@ -1,0 +1,81 @@
+
+DevTools listening on ws://127.0.0.1:46387/devtools/browser/8d091222-4b9b-47b6-8954-5ad5a4792dd3
+<<<CYPRESS.STDERR.START>>>(node:17973) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+<<<CYPRESS.STDERR.END>>>The experimentalStudio option was removed in Cypress version 15.4.0.
+
+Cypress Studio is now available for all users.
+
+You can safely remove this option from your config.
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.6.0                                                                         │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v20.5.1 (/usr/bin/node)                                                        │
+  │ Specs:          1 found (contact.cy.js)                                                        │
+  │ Searched:       cypress/e2e/contact.cy.js                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  contact.cy.js                                                                   (1 of 1)
+
+
+  Contact Section Tests
+    ✓ should display contact form fields
+    ✓ should open booking modal
+    1) should validate required fields
+
+
+  2 passing (8s)
+  1 failing
+
+  1) Contact Section Tests
+       should validate required fields:
+     AssertionError: Timed out retrying after 4000ms: Expected to find content: 'button' but never did.
+      at ContactPage.contains (webpack://testprotesting/./cypress/support/pages/BasePage.js:17:18)
+      at ContactPage.clickSendMessage (webpack://testprotesting/./cypress/support/pages/ContactPage.js:55:13)
+      at Context.eval (webpack://testprotesting/./cypress/e2e/contact.cy.js:21:20)
+
+
+
+[mochawesome] Report JSON saved to /home/rkshtjain3/testproai/testproTesting/cypress/reports/contact-report_001.json
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     8 seconds                                                                        │
+  │ Spec Ran:     contact.cy.js                                                                    │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/rkshtjain3/testproai/testproTesting/cypress/screenshots/contact.cy.js/Cont     (1280x720)
+     act Section Tests -- should validate required fields (failed).png                              
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  contact.cy.js                            00:08        3        2        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:08        3        2        1        -        -  
+

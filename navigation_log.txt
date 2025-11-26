@@ -1,0 +1,89 @@
+The experimentalStudio option was removed in Cypress version 15.4.0.
+
+Cypress Studio is now available for all users.
+
+You can safely remove this option from your config.
+
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        15.6.0                                                                         │
+  │ Browser:        Electron 138 (headless)                                                        │
+  │ Node Version:   v20.5.1 (/usr/bin/node)                                                        │
+  │ Specs:          1 found (navigation.cy.js)                                                     │
+  │ Searched:       cypress/e2e/navigation.cy.js                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  navigation.cy.js                                                                (1 of 1)
+
+
+  Navigation Tests
+    ✓ should have correct navigation links in header
+    ✓ should have CTA buttons in header
+    1) should navigate to Courses page
+
+
+  2 passing (4s)
+  1 failing
+
+  1) Navigation Tests
+       should navigate to Courses page:
+     Error: The following error originated from your application code, not from Cypress.
+
+  > Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+      at Ed (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:23529)
+      at rC (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:114352)
+      at Jk (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:102245)
+      at Mk (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:102217)
+      at tk (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:102073)
+      at qf (https://www.testproai.com/_next/static/chunks/fd9d1056-4665d009cd43c605.js:9:97936)
+      at MessagePort.P (https://www.testproai.com/_next/static/chunks/2472-4265b4611546f429.js:25:1668)
+
+
+
+[mochawesome] Report JSON saved to /home/rkshtjain3/testproai/testproTesting/cypress/reports/navigation-report_002.json
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     navigation.cy.js                                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/rkshtjain3/testproai/testproTesting/cypress/screenshots/navigation.cy.js/N     (1280x720)
+     avigation Tests -- should navigate to Courses page (failed).png                                
+
+
+================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  navigation.cy.js                         00:04        3        2        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:04        3        2        1        -        -  
+
