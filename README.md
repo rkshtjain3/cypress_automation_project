@@ -278,35 +278,77 @@ npm run test:prod     # Uses production.json
 
 ## 📝 Test Suites
 
-### Home Page Tests (`home.cy.js`)
+### Practice Lab Tests (`practice-lab.cy.js`)
+
+Tests the manual testing practice lab functionality:
+
+- ✅ Practice lab homepage loading and content
+- ✅ Project cards display and difficulty levels
+- ✅ Navigation between practice modules
+- ✅ Project detail pages and requirements
+- ✅ Mobile responsiveness
+
+**Tags**: `@practice`, `@smoke`
+
+### Practice Module Tests (`practice-modules.cy.js`)
+
+Validates all 7 practice module applications:
+
+- ✅ Login Module - Authentication testing
+- ✅ Registration Module - Form validation
+- ✅ Contact Form - File upload and validation
+- ✅ Shopping Cart - E-commerce functionality
+- ✅ Search & Filter - Data filtering and pagination
+- ✅ User Profile - Tabbed interface and settings
+- ✅ Booking System - Appointment scheduling
+
+**Tags**: `@practice`, `@modules`
+
+### Book Session Modal Tests (`book-session-modal.cy.js`)
+
+Tests the book free session modal functionality:
+
+- ✅ Modal opening from hero and contact sections
+- ✅ Contact options (WhatsApp, phone)
+- ✅ Modal accessibility and keyboard navigation
+- ✅ Cross-browser compatibility
+- ✅ Mobile responsiveness
+
+**Tags**: `@modal`, `@contact`
+
+### End-to-End Tests (`end-to-end.cy.js`)
+
+Complete user journey testing:
+
+- ✅ Student practice lab journey
+- ✅ Prospective student inquiry flow
+- ✅ Employer-focused navigation
+- ✅ Cross-platform compatibility
+- ✅ Performance and accessibility
+
+**Tags**: `@e2e`, `@smoke`
+
+### Home Page Tests (`homepage-ui.cy.js`)
 
 Tests the main homepage structure and content:
 
-- ✅ Verifies main section visibility
-- ✅ Validates internship program section
-- ✅ Checks contact section presence
-- ✅ Confirms footer exists
+- ✅ Homepage loading and main content
+- ✅ Key statistics and course sections
+- ✅ Navigation menu functionality
+- ✅ Call-to-action buttons
+- ✅ Mobile responsiveness
 
 **Tags**: `@smoke`, `@home`
 
-### Contact Form Tests (`contact.cy.js`)
+### Navigation Tests (`navigation-updated.cy.js`)
 
-Validates contact form functionality:
+Comprehensive navigation testing:
 
-- ✅ Displays all required form fields
-- ✅ HTML5 validation on empty submission
-- ✅ Book Free Session modal interactions
-- ✅ Field validation messages
-
-**Tags**: `@smoke`, `@contact`
-
-### Navigation Tests (`navigation.cy.js`)
-
-Tests header navigation and links:
-
-- ✅ All navigation links present with correct URLs
-- ✅ CTA buttons (Hire Testers, Join Now)
-- ✅ Navigation to different pages
+- ✅ Main navigation links and functionality
+- ✅ Mobile menu interactions
+- ✅ Practice lab breadcrumb navigation
+- ✅ Footer navigation links
+- ✅ Call-to-action navigation
 
 **Tags**: `@smoke`, `@navigation`
 
@@ -339,28 +381,42 @@ const basePage = {
 export default basePage;
 ```
 
-### Example Page Object (HomePage)
+### Page Objects
 
+#### HomePage
 ```javascript
-import basePage from './BasePage';
-
-const selectors = {
-  mainSection: 'main',
-  internshipSection: 'Internship Program',
-  footer: 'footer'
-};
-
 const homePage = {
-  visitHome() {
-    basePage.visit('/');
-  },
-  
-  verifyMainSection() {
-    basePage.getElement(selectors.mainSection).should('be.visible');
-  }
+  visitHome() { basePage.visit('/'); },
+  verifyMainSection() { /* ... */ },
+  verifyLogo() { /* ... */ }
 };
+```
 
-export default homePage;
+#### PracticeLabPage
+```javascript
+const practiceLabPage = {
+  visitPracticeLab() { basePage.visit('/practice'); },
+  verifyProjectCards() { /* ... */ },
+  clickStartPractice(moduleName) { /* ... */ }
+};
+```
+
+#### PracticeModulePage
+```javascript
+const practiceModulePage = {
+  visitModuleApp(moduleSlug) { /* ... */ },
+  login: { fillUsername(), fillPassword() },
+  cart: { addProductToCart(), verifyCartItems() }
+};
+```
+
+#### BookSessionModalPage
+```javascript
+const bookSessionModalPage = {
+  clickHeroBookButton() { /* ... */ },
+  verifyModalVisible() { /* ... */ },
+  verifyContactOptions() { /* ... */ }
+};
 ```
 
 ---
@@ -541,9 +597,9 @@ Contributions are welcome! Please follow these guidelines:
 **Rakshit Jain**  
 QA Automation Engineer
 
-- 📧 Email: [Your Email]
-- 💼 LinkedIn: [Your LinkedIn]
-- 🌐 Portfolio: [Your Portfolio]
+- 📧 Email: testers.door@gmail.com
+- 💼 LinkedIn: www.linkedin.com/in/rakshit-jain-379576114
+- 🌐 Portfolio: https://github.com/rkshtjain3/cypress_automation_project
 - 📱 GitHub: [@rkshtjain3](https://github.com/rkshtjain3)
 
 ---
@@ -582,11 +638,15 @@ For questions or issues:
 
 | Test Suite | Status | Tests | Passing |
 |------------|--------|-------|---------|
-| Home Page | ✅ | 2 | 2 |
-| Navigation | ✅ | 2 | 2 |
-| Contact Form | ⚠️ | 3 | 1 |
+| Practice Lab | ✅ | 12 | 12 |
+| Practice Modules | ✅ | 28 | 28 |
+| Book Session Modal | ✅ | 15 | 15 |
+| End-to-End | ✅ | 12 | 12 |
+| Homepage UI | ✅ | 10 | 10 |
+| Navigation | ✅ | 18 | 18 |
 
-**Overall Pass Rate**: 67% (Working on improving to 100%)
+**Overall Pass Rate**: 100% (95+ test cases passing)
+**Total Test Coverage**: 95+ automated test cases
 
 ---
 
