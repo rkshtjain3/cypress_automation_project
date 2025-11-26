@@ -146,8 +146,3 @@ Main configuration is in `cypress.config.js`:
 
 This project is created for portfolio purposes.
 
----
-
-**Author**: [Your Name]  
-**Portfolio**: [Your Portfolio Link]  
-**LinkedIn**: [Your LinkedIn]
