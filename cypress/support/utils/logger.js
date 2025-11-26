@@ -27,9 +27,12 @@ export const logger = {
     error: (message, error = {}) => {
         const logMessage = `❌ ${message}`;
         cy.log(logMessage);
+        // Also log to console for CI visibility
+        console.log(logMessage);
 
         if (error.message) {
             cy.log(`Error: ${error.message}`);
+            console.log(`Error Details: ${error.message}`);
         }
 
         cy.task('log', {

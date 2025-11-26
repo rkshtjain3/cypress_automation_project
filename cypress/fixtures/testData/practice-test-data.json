@@ -1,0 +1,213 @@
+{
+  "users": {
+    "validUser": {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "1234567890",
+      "password": "password123",
+      "confirmPassword": "password123",
+      "dateOfBirth": "1990-01-01",
+      "acceptTerms": true
+    },
+    "invalidUser": {
+      "name": "Test123",
+      "email": "invalid-email",
+      "phone": "123",
+      "password": "123",
+      "confirmPassword": "456",
+      "dateOfBirth": "2020-01-01",
+      "acceptTerms": false
+    }
+  },
+  "loginCredentials": {
+    "valid": {
+      "email": "test@example.com",
+      "password": "password123"
+    },
+    "invalid": {
+      "email": "wrong@email.com",
+      "password": "wrongpass"
+    },
+    "admin": {
+      "email": "admin@shop.com",
+      "password": "admin123"
+    }
+  },
+  "contactForm": {
+    "valid": {
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "phone": "9876543210",
+      "subject": "technical",
+      "priority": "high",
+      "message": "This is a test message for the contact form validation."
+    },
+    "invalid": {
+      "name": "Test123!@#",
+      "email": "invalid",
+      "phone": "123",
+      "subject": "",
+      "priority": "",
+      "message": "Short"
+    }
+  },
+  "appointment": {
+    "valid": {
+      "name": "Alice Johnson",
+      "phone": "5551234567",
+      "email": "alice@example.com",
+      "reason": "Regular checkup appointment"
+    },
+    "emergency": {
+      "name": "Bob Emergency",
+      "phone": "5559876543",
+      "email": "bob@example.com",
+      "reason": "Emergency consultation needed"
+    }
+  },
+  "products": [
+    {
+      "name": "Wireless Headphones",
+      "price": 99.99,
+      "category": "Audio"
+    },
+    {
+      "name": "Smartphone",
+      "price": 699.99,
+      "category": "Mobile"
+    },
+    {
+      "name": "Laptop",
+      "price": 1299.99,
+      "category": "Computer"
+    }
+  ],
+  "books": [
+    {
+      "title": "JavaScript Guide",
+      "author": "John Smith",
+      "category": "Programming",
+      "price": 29.99
+    },
+    {
+      "title": "React Mastery",
+      "author": "Jane Doe",
+      "category": "Programming",
+      "price": 39.99
+    }
+  ],
+  "practiceModules": [
+    {
+      "name": "Login Module",
+      "slug": "login-module",
+      "level": "Beginner",
+      "bugCount": 12,
+      "features": [
+        "Email/password authentication",
+        "Show/hide password toggle",
+        "Form validation",
+        "Error messaging"
+      ]
+    },
+    {
+      "name": "Registration Module",
+      "slug": "registration-module",
+      "level": "Intermediate",
+      "bugCount": 11,
+      "features": [
+        "Multi-field form",
+        "Password confirmation",
+        "Age validation",
+        "Terms acceptance"
+      ]
+    },
+    {
+      "name": "Contact Form",
+      "slug": "contact-form",
+      "level": "Beginner",
+      "bugCount": 12,
+      "features": [
+        "File upload",
+        "Priority selection",
+        "Subject categorization",
+        "Form reset"
+      ]
+    },
+    {
+      "name": "Shopping Cart",
+      "slug": "shopping-cart",
+      "level": "Advanced",
+      "bugCount": 6,
+      "features": [
+        "Add to cart",
+        "Quantity management",
+        "Price calculation",
+        "Checkout process"
+      ]
+    },
+    {
+      "name": "Search & Filter",
+      "slug": "search-filter",
+      "level": "Intermediate",
+      "bugCount": 8,
+      "features": [
+        "Search functionality",
+        "Category filters",
+        "Sorting options",
+        "Pagination"
+      ]
+    },
+    {
+      "name": "User Profile",
+      "slug": "user-profile",
+      "level": "Intermediate",
+      "bugCount": 8,
+      "features": [
+        "Profile management",
+        "Password change",
+        "File upload",
+        "Privacy settings"
+      ]
+    },
+    {
+      "name": "Booking System",
+      "slug": "booking-system",
+      "level": "Advanced",
+      "bugCount": 8,
+      "features": [
+        "Calendar integration",
+        "Time slot selection",
+        "Appointment management",
+        "Emergency booking"
+      ]
+    }
+  ],
+  "expectedBugs": {
+    "login-module": [
+      "Case sensitive email validation",
+      "Wrong password length validation",
+      "Incorrect error messages",
+      "Missing field validation",
+      "Button state issues"
+    ],
+    "registration-module": [
+      "Name validation allows numbers",
+      "Email validation issues",
+      "Phone format problems",
+      "Password confirmation case sensitivity",
+      "Age validation errors"
+    ],
+    "contact-form": [
+      "File type validation issues",
+      "Missing required field validation",
+      "Priority styling not working",
+      "Form reset problems",
+      "Message length validation errors"
+    ]
+  },
+  "testEnvironments": {
+    "local": "http://localhost:3000",
+    "staging": "https://staging.testproai.com",
+    "production": "https://testproai.com"
+  }
+}

@@ -12,6 +12,7 @@
 // Commands are now organized in:
 // - commands/navigation.commands.js - Navigation-related commands
 // - commands/form.commands.js - Form-related commands
+// - commands/practice-commands.js - Practice Lab commands
 
 // Example of a simple custom command:
 // Cypress.Commands.add('login', (email, password) => { ... })

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test:practice": "node run-practice-tests.js",
+    "test:practice:core": "node run-practice-tests.js --suite core",
+    "test:practice:modules": "node run-practice-tests.js --suite modules", 
+    "test:practice:modal": "node run-practice-tests.js --suite modal",
+    "test:practice:e2e": "node run-practice-tests.js --suite e2e",
+    "test:practice:headed": "HEADLESS=false node run-practice-tests.js",
+    "test:practice:firefox": "BROWSER=firefox node run-practice-tests.js",
+    "test:practice:staging": "BASE_URL=https://staging.testproai.com node run-practice-tests.js",
+    "test:practice:production": "BASE_URL=https://testproai.com node run-practice-tests.js"
+  }
+}

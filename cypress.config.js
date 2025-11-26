@@ -45,7 +45,7 @@ module.exports = defineConfig({
     responseTimeout: 15000,
 
     // Video & Screenshots
-    video: process.env.CI ? true : false,
+    video: process.env.CI ? true : true,
     videoCompression: 32,
     screenshotOnRunFailure: true,
     videosFolder: 'cypress/videos',
