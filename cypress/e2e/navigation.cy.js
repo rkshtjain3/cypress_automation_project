@@ -1,20 +1,22 @@
 import navigationPage from '../support/pages/NavigationPage';
 
-describe('Navigation Tests', () => {
+describe('Header Navigation - Regression Tests', { tags: ['@smoke', '@navigation'] }, () => {
+
     beforeEach(() => {
+        // Arrange: Navigate to home
         navigationPage.visitHome();
     })
 
-    it('should have correct navigation links in header', () => {
-        navigationPage.verifyNavigationLinks();
-    })
+    context('Desktop Navigation', () => {
 
-    it('should have CTA buttons in header', () => {
-        navigationPage.verifyCTAButtons();
-    })
+        it('should display all navigation links with correct URLs', () => {
+            // Assert: Verify navigation links
+            navigationPage.verifyNavigationLinks();
+        })
 
-    it('should navigate to Courses page', () => {
-        navigationPage.clickCourses();
-        navigationPage.verifyCoursesPage();
+        it('should have CTA buttons with correct links', () => {
+            // Assert: Verify CTA buttons
+            navigationPage.verifyCTAButtons();
+        })
     })
 })

@@ -1,4 +1,5 @@
 import basePage from './BasePage';
+import { NAVIGATION_LINKS } from '../constants/testData';
 
 // Selectors
 const selectors = {
@@ -8,35 +9,52 @@ const selectors = {
 
 // Page Object
 const navigationPage = {
+    /**
+     * Visit home page
+     */
     visitHome() {
-        basePage.visit('https://testproai.com');
+        basePage.visit('/');  // Uses baseUrl from config
     },
 
+    /**
+     * Verify all navigation links
+     */
     verifyNavigationLinks() {
-        cy.get(selectors.desktopNav).within(() => {
-            cy.contains('Home').should('have.attr', 'href', '/');
-            cy.contains('Courses').should('have.attr', 'href', '/courses');
-            cy.contains('Practice').should('have.attr', 'href', '/practice');
-            cy.contains('Career Switch').should('have.attr', 'href', '/career-switch');
-            cy.contains('Interview Prep').should('have.attr', 'href', '/interview-preparation');
-            cy.contains('Blog').should('have.attr', 'href', '/blog');
-            cy.contains('About').should('have.attr', 'href', '/about');
-            cy.contains('Internship').should('have.attr', 'href', '/internship');
-            cy.contains('Get Hired').should('have.attr', 'href', '/get-hired');
+        NAVIGATION_LINKS.desktop.forEach(link => {
+            cy.verifyLink(link.text, link.url);
         });
     },
 
+    /**
+     * Verify CTA buttons
+     */
     verifyCTAButtons() {
-        cy.get(selectors.ctaButtons).within(() => {
-            cy.contains('Hire Testers').should('have.attr', 'href', '/hire');
-            cy.contains('Join Now').should('have.attr', 'href', '/get-started');
+        NAVIGATION_LINKS.cta.forEach(button => {
+            cy.get(selectors.ctaButtons)
+                .find('a')
+                .contains(button.text)
+                .should('have.attr', 'href', button.url);
         });
     },
 
-    clickCourses() {
-        cy.get(selectors.desktopNav).contains('Courses').click();
+    /**
+     * Click on a navigation link
+     * @param {string} linkText - Text of the link
+     */
+    clickLink(linkText) {
+        cy.get(selectors.desktopNav).contains(linkText).click();
     },
 
+    /**
+     * Click Courses link
+     */
+    clickCourses() {
+        cy.clickAndVerifyNavigation('Courses', '/courses');
+    },
+
+    /**
+     * Verify courses page loaded
+     */
     verifyCoursesPage() {
         cy.url().should('include', '/courses');
         cy.get('h1').should('exist');

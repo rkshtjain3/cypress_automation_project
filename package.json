@@ -1,17 +1,41 @@
 {
-  "name": "testprotesting",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cypress-automation-framework",
+  "version": "2.0.0",
+  "description": "Professional Cypress E2E automation framework with Page Object Model for TestPro AI",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
+    "cypress:open:dev": "CYPRESS_ENV=dev cypress open",
     "test": "npm run clean:reports && (npm run test:run || true) && npm run test:merge",
     "test:run": "cypress run",
+    "test:dev": "CYPRESS_ENV=dev cypress run",
+    "test:staging": "CYPRESS_ENV=staging cypress run",
+    "test:prod": "CYPRESS_ENV=production cypress run",
+    "test:smoke": "cypress run --env grepTags=@smoke",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge",
+    "test:headed": "cypress run --headed",
     "test:merge": "node merge-reports.js",
-    "clean:reports": "rm -rf cypress/reports/*.json cypress/reports/html/*"
+    "clean:reports": "rm -rf cypress/reports/*.json cypress/reports/html/*",
+    "clean:screenshots": "rm -rf cypress/screenshots/*",
+    "clean:videos": "rm -rf cypress/videos/*",
+    "clean:all": "npm run clean:reports && npm run clean:screenshots && npm run clean:videos"
   },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "automation",
+    "testing",
+    "page-object-model",
+    "cypress-io"
+  ],
   "author": "Rakshit Jain",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkshtjain3/cypress_automation_project.git"
+  },
   "dependencies": {
     "cypress": "^15.6.0"
   },

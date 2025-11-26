@@ -1,25 +1,23 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
+/**
+ * Custom Cypress Commands
+ *
+ * This file is automatically loaded before your test files.
+ * Custom commands are defined in separate files in the commands/ directory
+ * and imported in e2e.js
+ *
+ * For more information on custom commands, see:
+ * https://on.cypress.io/custom-commands
+ */
+
+// Commands are now organized in:
+// - commands/navigation.commands.js - Navigation-related commands
+// - commands/form.commands.js - Form-related commands
+
+// Example of a simple custom command:
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
+
+// Example of a custom command with previous subject:
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
+
+// Example of overwriting an existing command:
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })

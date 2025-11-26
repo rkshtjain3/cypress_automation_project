@@ -1,0 +1,44 @@
+{
+    "validSubmission": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "phone": "+1234567890",
+        "course": "Cypress Automation Testing",
+        "message": "I am interested in learning Cypress automation testing. Please provide more information about the course schedule and fees."
+    },
+    "invalidEmail": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "invalid-email",
+        "phone": "+0987654321",
+        "course": "Manual Testing Fundamentals",
+        "message": "Test message"
+    },
+    "emptySubmission": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "phone": "",
+        "course": "",
+        "message": ""
+    },
+    "multipleSubmissions": [
+        {
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "email": "alice.j@test.com",
+            "phone": "+1111111111",
+            "course": "Selenium + Java Automation",
+            "message": "Interested in Selenium course"
+        },
+        {
+            "firstName": "Bob",
+            "lastName": "Williams",
+            "email": "bob.w@test.com",
+            "phone": "+2222222222",
+            "course": "API Testing with Postman",
+            "message": "Want to learn API testing"
+        }
+    ]
+}

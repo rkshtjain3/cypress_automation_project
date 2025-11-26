@@ -1,27 +1,43 @@
 import contactPage from '../support/pages/ContactPage';
 
-describe('Contact Section Tests', () => {
+describe('Contact Form - Functional Tests', { tags: ['@smoke', '@contact'] }, () => {
+
     beforeEach(() => {
+        // Arrange: Navigate to contact section
         contactPage.visitContact();
     })
 
-    it('should display contact form fields', () => {
-        contactPage.verifyFormFields();
+    context('Form Field Validation', () => {
+
+        it('should display all required form fields', () => {
+            // Assert: Verify form structure
+            contactPage.verifyFormFields();
+        })
+
+        it('should show validation error when submitting empty form', () => {
+            // Act: Try to submit without filling
+            contactPage.clickSendMessage();
+
+            // Assert: Verify HTML5 validation
+            contactPage.verifyFieldValidity(contactPage.firstNameInput);
+            contactPage.verifyFieldValidity(contactPage.emailInput);
+        })
     })
 
-    it('should open booking modal', () => {
-        contactPage.clickBookFreeSession();
-        contactPage.verifyModalIsVisible();
-        contactPage.closeModal();
-        contactPage.verifyModalIsClosed();
-    })
+    context('Modal Interactions', () => {
 
-    it('should validate required fields', () => {
-        // Try to submit without filling anything
-        contactPage.clickSendMessage();
+        it('should open and close booking modal correctly', () => {
+            // Act: Open modal
+            contactPage.clickBookFreeSession();
 
-        // HTML5 validation prevents submission
-        contactPage.verifyFieldValidity(contactPage.firstNameInput);
-        contactPage.verifyFieldValidity(contactPage.emailInput);
+            // Assert: Modal is visible
+            contactPage.verifyModalIsVisible();
+
+            // Act: Close modal
+            contactPage.closeModal();
+
+            // Assert: Modal is closed
+            contactPage.verifyModalIsClosed();
+        })
     })
 })

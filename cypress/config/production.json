@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://testproai.com",
+    "apiUrl": "https://api.testproai.com",
+    "retries": 2,
+    "video": true,
+    "defaultCommandTimeout": 15000,
+    "pageLoadTimeout": 40000
+}

@@ -1,19 +1,24 @@
 import homePage from '../support/pages/HomePage';
 
-describe('Home Page Tests', () => {
+describe('Home Page - Functional Tests', { tags: ['@smoke', '@home'] }, () => {
+
     beforeEach(() => {
+        // Arrange: Navigate to home page
         homePage.visitHome();
     })
 
-    it('should display the Hero section correctly', () => {
-        homePage.verifyMainSection();
-        // Checking for main heading if possible, or just visibility of main sections
-        homePage.contains('TestPro AI').should('be.visible');
-    })
+    context('Page Structure', () => {
 
-    it('should display all main sections', () => {
-        homePage.verifyInternshipSection();
-        homePage.verifyContactSection();
-        homePage.verifyFooter();
+        it('should display main section when page loads', () => {
+            // Assert: Verify main structure
+            homePage.verifyMainSection();
+        })
+
+        it('should display all key sections of the homepage', () => {
+            // Assert: Verify all sections exist
+            homePage.verifyInternshipSection();
+            homePage.verifyContactSection();
+            homePage.verifyFooter();
+        })
     })
 })

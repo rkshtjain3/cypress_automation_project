@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://staging.testproai.com",
+    "apiUrl": "https://api-staging.testproai.com",
+    "retries": 1,
+    "video": true,
+    "defaultCommandTimeout": 15000,
+    "pageLoadTimeout": 40000
+}
